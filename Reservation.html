@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr" style="font-size: 16px;">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Réservation</title>
+  <meta name="description" content="Réservez votre événement à Kalaa. Mariages, shooting, anniversaires, et plus.">
+  <meta name="keywords" content="réservation, mariage, événement, Medenine">
+  <meta name="theme-color" content="#478ac9">
+  <meta property="og:title" content="Réservation">
+  <meta property="og:type" content="website">
+  
+  <link rel="stylesheet" href="nicepage.css" media="screen">
+  <link rel="stylesheet" href="Reservation.css" media="screen">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700|Open+Sans:300,400,600,700" rel="stylesheet">
+  
+  <script src="jquery.js" defer></script>
+  <script src="nicepage.js" defer></script>
+</head>
+
+<body class="u-body u-xl-mode" data-lang="fr">
+ <header class="u-header u-palette-2-light-2">
+  <div class="u-header-container">
+    <a href="#" class="u-logo">
+      <img src="images/istockphoto-1330934140-1024x1024.jpg" alt="Logo">
+    </a>
+    <nav class="u-menu">
+      <ul class="u-nav">
+        <li><a href="./">Accueil</a></li>
+        <li><a href="Galerie.html">Galerie</a></li>
+        <li><a href="Mes-services.html">Mes services</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+        <li><a href="Reservation.html">Réservation</a></li>
+      </ul>
+    </nav>
+    <div></div>
+  </div>
+</header>
+
+<style>
+/* Style du header */
+.u-header {
+  background-color: #f5e8df; /* couleur douce */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+}
+
+/* Conteneur central */
+.u-header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Logo */
+.u-logo img {
+  height: 50px;
+  width: auto;
+}
+
+/* Menu de navigation */
+.u-nav {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Liens du menu */
+.u-nav li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.u-nav li a:hover {
+  color: #a0522d; /* couleur lors du survol */
+}
+</style>
+
+
+  <main>
+
+    <section class="u-section-2">
+  <div class="u-sheet">
+    <h2 class="u-text-center">Inscription</h2>
+    <form action="inscrit.php" method="POST" class="u-form">
+      <div class="u-form-group u-form-partition-factor-2">
+        <label for="first-name">Prénom</label>
+        <input type="text" id="first-name" name="name" placeholder="Votre prénom" required class="u-input">
+      </div>
+
+      <div class="u-form-group u-form-partition-factor-2">
+        <label for="last-name">Nom</label>
+        <input type="text" id="last-name" name="name1" placeholder="Votre nom de famille" required class="u-input">
+      </div>
+
+      <div class="u-form-group">
+        <label for="adresse">Adresse</label>
+        <input type="text" id="adresse" name="adresse" placeholder="Votre adresse" class="u-input">
+      </div>
+
+      <div class="u-form-group u-form-partition-factor-2">
+        <label for="inscription-phone">Téléphone</label>
+        <input type="tel" id="inscription-phone" name="phone" placeholder="Ex: +216 20 000 000" required class="u-input">
+      </div>
+
+      <div class="u-form-group u-form-partition-factor-2">
+        <label for="inscription-email">Email</label>
+        <input type="email" id="inscription-email" name="email" placeholder="Votre email" required class="u-input">
+      </div>
+
+      <div class="u-form-group">
+        <label for="inscription-message">Remarques</label>
+        <textarea id="inscription-message" name="message" rows="4" placeholder="Notes ou remarques..." required class="u-input"></textarea>
+      </div>
+
+      <div class="u-form-group u-form-submit">
+        <input type="submit" value="S'inscrire" class="u-btn u-button-style">
+      </div>
+    </form>
+  </div>
+</section>
+
+    <section class="u-section-1">
+      <div class="u-sheet">
+        <h2 class="u-text-center">Faire une réservation</h2>
+        <form action="reservation.php" method="post" class="u-form">
+          <div class="u-form-group u-form-partition-factor-2">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" placeholder="Entrez une adresse email valide" required class="u-input">
+          </div>
+
+          <div class="u-form-group u-form-partition-factor-2">
+            <label for="name">Nom</label>
+            <input type="text" id="name" name="name" placeholder="Entrez votre nom" required class="u-input">
+          </div>
+
+          <div class="u-form-group">
+            <label for="select">Type de réservation</label>
+            <select id="select" name="select" required class="u-input">
+              <option value="">-- Choisissez un service --</option>
+              <option value="فضاء القلعة بالراجح">فضاء القلعة بالراجح</option>
+              <option value="قلعة لخضر">قلعة لخضر</option>
+              <option value="espace verte">Espace verte</option>
+              <option value="anniversaire">Anniversaire</option>
+              <option value="évenement">Événement</option>
+              <option value="shooting">Shooting</option>
+            </select>
+          </div>
+
+          <div class="u-form-group u-form-partition-factor-2">
+            <label for="date">Date</label>
+            <input type="date" id="date" name="date" required class="u-input">
+          </div>
+
+          <div class="u-form-group u-form-partition-factor-2">
+            <label for="phone">Téléphone</label>
+            <input type="tel" id="phone" name="phone" placeholder="Ex: +216 20 000 000" required class="u-input">
+          </div>
+
+          <div class="u-form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" placeholder="Votre message..." required class="u-input"></textarea>
+          </div>
+
+          <div class="u-form-group u-form-submit">
+            <input type="submit" value="Envoyer" class="u-btn u-button-style">
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="u-footer u-grey-80">
+    <div class="u-sheet u-align-center">
+      <p class="u-small-text u-text">© 2025 Four Seasons Kalaa - Tous droits réservés.</p>
+    </div>
+  </footer>
+</body>
+</html>
